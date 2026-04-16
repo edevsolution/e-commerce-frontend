@@ -1,4 +1,3 @@
-import React from "react";
 
 const Login = () => {
   return (
@@ -6,7 +5,7 @@ const Login = () => {
       <form action="" className="flex flex-col gap-3 w-1/3 h-2/3 mx-auto my-auto border-2 border-black px-8 py-10 rounded-xl">
         <h1 className="text-center text-3xl font-semibold">Log In</h1>
 
-        <lebel>Email</lebel>
+        <label>Email</label>
         <input
           type="email"
           name="email"
@@ -14,7 +13,7 @@ const Login = () => {
           required
           className="border-2 border-black rounded-xl p-2"
         />
-        <lebel>Password </lebel>
+        <label>Password </label>
         <input
           type="password"
           name="password"
