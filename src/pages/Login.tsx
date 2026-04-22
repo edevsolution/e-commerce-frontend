@@ -78,6 +78,7 @@ const Login = () => {
       //  localStorage.setItem('user', JSON.stringify(user));
 
       await new Promise((resolve) => setTimeout(resolve, 1500));
+       console.log(email,password)
       setSubmitSuccess(true);
 
       setEmail("");
