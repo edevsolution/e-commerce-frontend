@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import bgImage from '../../assets/bg.png';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -95,10 +96,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat" 
+       style={{ backgroundImage: `url(${bgImage})` }}>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-3 w-4/5 md:w-3/5 lg:w-1/3 h-2/3 mx-auto my-auto border-2 border-black px-8 py-10 rounded-xl"
+        className="flex flex-col gap-3 w-4/5 md:w-3/5 lg:w-1/3 h-2/3 mx-auto my-auto border-2 border-black px-8 py-10 rounded-xl  bg-white/40 backdrop-blur-md border-white/30"
       >
         <h1 className="text-center text-3xl font-semibold">Log In</h1>
 
