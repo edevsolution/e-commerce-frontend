@@ -12,7 +12,9 @@ import Main from "../components/layout/Main";
 const router = createBrowserRouter([
   // ── Public
   { path: "/", element: <Main />, children: [
-    { path: "/", element: <Home /> }
+    { path: "/", element: <Home /> },
+    {path: "/login", element: <Login /> },
+    {path: "/signup", element: <Signup /> }
   ]},
  
 

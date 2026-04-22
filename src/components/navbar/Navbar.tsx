@@ -7,6 +7,7 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface NavLinkProps {
   label: string;
@@ -75,7 +76,7 @@ const Navbar = () => {
             className="text-gray-900 hover:text-red-600 transition-colors"
             aria-label="User account"
           >
-            <User size={20} />
+           <Link to={"login"}> <User size={20} /> </Link> 
           </button>
 
           {/* Hamburger */}
