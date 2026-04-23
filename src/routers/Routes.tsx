@@ -7,12 +7,16 @@ import Home from "../pages/Home/Home";
 import NotFound from "../pages/404/NotFound";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import Main from "../components/layout/Main";
 
 const router = createBrowserRouter([
   // ── Public
-  { path: "/", element: <Home /> },
-  { path: "/login", element: <Login /> },
-  { path: "/signup", element: <Signup /> },
+  { path: "/", element: <Main />, children: [
+    { path: "/", element: <Home /> },
+    {path: "/login", element: <Login /> },
+    {path: "/signup", element: <Signup /> }
+  ]},
+ 
 
 
 
