@@ -111,7 +111,7 @@ const Login = () => {
             name="email"
             placeholder="Enter your email"
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/40 focus:outline-none"
             value={email}
             onChange={(e) => {
               console.log("New Email: ", e.target.value);
@@ -130,7 +130,7 @@ const Login = () => {
             name="password"
             placeholder="Enter your password"
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
             value={password}
             onChange={(e) => {
               console.log("New Password: ", e.target.value);
