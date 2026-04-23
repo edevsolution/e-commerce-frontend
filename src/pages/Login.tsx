@@ -1,7 +1,7 @@
 //import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import bgImage from '../../assets/bg.png';
+import bgImage from "../assets/bg.png"
 
 const Login = () => {
   const [email, setEmail] = useState("");
