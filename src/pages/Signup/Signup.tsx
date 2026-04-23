@@ -1,4 +1,4 @@
-import axios from "axios";
+//import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bgImage from '../../assets/bg.png';
@@ -122,6 +122,7 @@ const Signup = () => {
       //   phone,
       //   password,
       // });
+      // console.log(response.data);
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log(name,email,phone,password)
       setSubmitSuccess(true);
