@@ -177,7 +177,7 @@ const Signup = () => {
             }}
             placeholder="Enter your full Name."
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
           />
           {nameError && (
             <p className="text-red-500 text-sm mt-1">{nameError}</p>
@@ -196,7 +196,7 @@ const Signup = () => {
             }}
             placeholder="Enter your email"
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
           />
           {emailError && (
             <p className="text-red-500 text-sm mt-1">{emailError}</p>
@@ -216,7 +216,7 @@ const Signup = () => {
             }}
             placeholder="Enter your phone number."
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
           />
           {phoneError && (
             <p className="text-red-500 text-sm mt-1">{phoneError}</p>
@@ -240,7 +240,7 @@ const Signup = () => {
             }}
             placeholder="Enter your password"
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
           />
           {passwordError && (
             <p className="text-red-500 text-sm mt-1">{passwordError}</p>
@@ -261,7 +261,7 @@ const Signup = () => {
             }}
             placeholder="Enter your password"
             required
-            className="border-2 border-black rounded-xl p-2"
+            className="border border-white/100 rounded-xl p-2 focus:border-white focus:ring-2 focus:ring-white/80 focus:outline-none"
           />
           {confirmPasswordError && (
             <p className="text-red-500 text-sm mt-1">{confirmPasswordError}</p>
