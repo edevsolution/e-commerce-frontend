@@ -32,9 +32,9 @@ const Navbar = () => {
       {/* ── Main bar ── */}
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-12 h-14">
         {/* Logo */}
-        <span className="font-black uppercase text-xl tracking-tight text-gray-900 select-none">
+        <Link to="/" className="font-black uppercase text-xl tracking-tight text-gray-900 select-none hover:text-red-600 transition-colors duration-200">
           outfitra
-        </span>
+        </Link>
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
