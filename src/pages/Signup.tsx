@@ -1,5 +1,5 @@
 //import axios from "axios";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bgImage from "../assets/bg.png";
 
@@ -23,7 +23,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   // Name Validation
-  const validateName = (value) => {
+  const validateName = (value: string) => {
     if (!value.trim()) {
       return "Full name is required";
     }
@@ -37,7 +37,7 @@ const Signup = () => {
   };
 
   // Email validation
-  const validateEmail = (value) => {
+  const validateEmail = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!value.trim()) {
@@ -50,7 +50,7 @@ const Signup = () => {
   };
 
   // Number validation
-  const validatePhone = (value) => {
+  const validatePhone = (value: string) => {
     if (!value.trim()) {
       return "Phone number is required";
     }
@@ -64,7 +64,7 @@ const Signup = () => {
   };
 
   // Password Validation
-  const validatePassword = (value) => {
+  const validatePassword = (value: string) => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (!value) {
       return "Password is required";
@@ -76,7 +76,7 @@ const Signup = () => {
   };
 
   // Confirm Password Validation
-  const validateConfirmPassword = (value, passwordValue) => {
+  const validateConfirmPassword = (value: string, passwordValue: string) => {
     if (!value) {
       return "Please confirm your password";
     }
@@ -86,7 +86,7 @@ const Signup = () => {
     return "";
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setSubmitError("");
@@ -144,10 +144,10 @@ const Signup = () => {
       setTimeout(() => {
         navigate("/login");
       }, 1500);
-    } catch (error) {
+    } catch (error: any) {
       // Error handling
       const errorMessage =
-        error.response?.data?.message || "Signup failed. Please try again.";
+        error?.response?.data?.message || "Signup failed. Please try again.";
       setSubmitError(errorMessage);
     } finally {
       setIsLoading(false);
