@@ -1,5 +1,5 @@
 //import axios from "axios";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bgImage from "../assets/bg.png"
 
@@ -55,7 +55,7 @@ const Login = () => {
   };
 
   //Form submit function
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setSubmitError("");
@@ -89,7 +89,7 @@ const Login = () => {
         navigate("/");
       }, 1500);
     } catch (error) {
-      setSubmitError("Invalid Email or Password. Please Try Again!");
+      setSubmitError("Invalid Email or Password. Please Try Again!" + error);
     } finally {
       setIsLoading(false);
     }
