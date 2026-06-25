@@ -5,12 +5,21 @@ import PrivateRoute from "./PrivateRoute";
 
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import Main from "../components/layout/Main";
 
 const router = createBrowserRouter([
   // ── Public
-  { path: "/", element: <Home /> },
-
-
+  {
+    path: "/",
+    element: <Main />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+    ],
+  },
 
   // ── Private (logged in only)
   {
@@ -18,8 +27,6 @@ const router = createBrowserRouter([
     children: [],
   },
 
-
-  
   // ── Admin (logged in + role === 'admin')
   {
     element: <AdminRoute />,
